@@ -497,11 +497,9 @@
 
             // Tạo dữ liệu in
             const printData = {
-                printer: selectedPrinter,
+                printerName: selectedPrinter,
                 content: textToPrint,
                 type: "text",
-                timestamp: Date.now(),
-                request_type: 'print_text'
             };
 
             socket.emit('request_print_job', printData);
